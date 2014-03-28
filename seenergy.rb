@@ -6,19 +6,19 @@ get '/Home/EnergyUse' do
 end
 
 get '/Home/Recommendations' do
-	erb :recommendations
+	erb :Recommendations
 end
 
 get '/Home/UserForm' do
-	erb :userform
+	erb :UserForm
 end
 
 get '/Account/Register' do
-	erb :register
+	erb :Register
 end
 
 get '/Account/Login' do
-	erb :login
+	erb :Login
 end
 
 get '/' do
@@ -26,7 +26,7 @@ get '/' do
 end
 
 post '/Account/Register' do
-	erb :userform
+	erb :UserForm
 end
 
 post '/Account/Login' do
