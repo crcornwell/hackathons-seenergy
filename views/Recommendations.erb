@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendations - My ASP.NET Application</title>
+    <link href="/Content/bootstrap.css" rel="stylesheet"/>
+<link href="/Content/site.css" rel="stylesheet"/>
+
+    <script src="/Scripts/modernizr-2.6.2.js"></script>
+
+    <script type='text/javascript' src='http://www.google.com/jsapi'></script>
+
+    
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                
+                
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    
+                    <li><img src="/img/Seenergy_Logo.png" style="width: 15%; height: 15%; padding-top:10px" /></li>
+                    
+                </ul>
+                    <ul class="nav navbar-nav navbar-right">
+        <li><a href="/Home/EnergyUse">Graphs</a></li>
+        <li><a href="/Home/Recommendations">Recommendations</a></li>
+        <li><a href="/Home/UserForm" id="loginLink">Configurations</a></li>
+        <li> <h4>|</h4></li>
+        <li><a href="/Account/Register" id="registerLink">Register</a></li>
+        <li><a href="/Account/Login" id="loginLink">Log in</a></li>
+        
+    </ul>
+
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        
+
+
+<link href='http://fonts.googleapis.com/css?family=Spinnaker' rel='stylesheet' type='text/css'>
+
+<h2 style="text-align:center; font-family:Spinnaker">How can I save?</h2>
+
+
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active" data-interval="5000"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1" data-interval="5000"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2" data-interval="5000"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+        <div class="item active">
+            <div style="height: 200px; width:auto; background-color:#1bb2dd; "></div>
+            <div class="carousel-caption">
+                <h3 style="font-family:Spinnaker">Change your pricing from tier to peak pricing and save $6/month.</h3>
+                <p style="font-family:Spinnaker">83% of your energy consumption is during peak hours. Call your provider and ask to change your pricing for peak pricing.</p>
+            </div>
+        </div>
+        <div class="item">
+            <div style="height: 200px; width:auto; background-color:#e77a7a"></div>
+            <div class="carousel-caption">
+                <h3 style="font-family:Spinnaker">A high-efficiency washer can save you $15/month.</h3>
+                <p style="font-family:Spinnaker">Based on your usage pattern for the washer, there are other washer models that may perform better.</p>
+            </div>
+        </div>
+        <div class="item">
+            <div style="height: 200px; width:auto; background-color:#fe953a"></div>
+            <div class="carousel-caption">
+                <h3 style="font-family:Spinnaker">Do your laundry after 6pm and save $13/month.</h3>
+                <p style="font-family:Spinnaker">46% of your washer and dryer usage has occurred during peak pricing hours.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+</div>
+
+
+        <hr />
+        <footer>
+            <p>&copy; 2014 - Seenergy</p>
+        </footer>
+    </div>
+
+    <script src="/Scripts/jquery-1.10.2.js"></script>
+
+    <script src="/Scripts/bootstrap.js"></script>
+<script src="/Scripts/respond.js"></script>
+
+    <script src="/Scripts/energyhack.js"></script>
+    
+
+    <script type="text/javascript">
+
+        EnergyHack.Layout.StartUp = function () {
+
+            if (EnergyHack.Page.StartUp) {
+                EnergyHack.Page.StartUp();
+            }
+        }
+
+        $(document).ready(EnergyHack.Layout.StartUp);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in - My ASP.NET Application</title>
+    <link href="/Content/bootstrap.css" rel="stylesheet"/>
+<link href="/Content/site.css" rel="stylesheet"/>
+
+    <script src="/Scripts/modernizr-2.6.2.js"></script>
+
+    <script type='text/javascript' src='http://www.google.com/jsapi'></script>
+
+    
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                
+                
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    
+                    <li><img src="/img/Seenergy_Logo.png" style="width: 15%; height: 15%; padding-top:10px" /></li>
+                    
+                </ul>
+                    <ul class="nav navbar-nav navbar-right">
+        <li><a href="/Home/EnergyUse">Graphs</a></li>
+        <li><a href="/Home/Recommendations">Recommendations</a></li>
+        <li><a href="/Home/UserForm" id="loginLink">Configurations</a></li>
+        <li> <h4>|</h4></li>
+        <li><a href="/Account/Register" id="registerLink">Register</a></li>
+        <li><a href="/Account/Login" id="loginLink">Log in</a></li>
+        
+    </ul>
+
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        
+
+
+<h2>Log in.</h2>
+<div class="row">
+    <div class="col-md-8">
+        <section id="loginForm">
+<form action="/Account/Login" class="form-horizontal" method="post" role="form"><input name="__RequestVerificationToken" type="hidden" value="PB8_gir3NmYcjQglXN1Cts9o0bPFOF2_J88sFCAVihCWrHjlFoI6wudYS5t1GpWlwDE6g-tcoq1l_CgPSsoZWuPqUcNuUvf9BcaayYZ1a-k1" />                <h4>Use a local account to log in.</h4>
+                <hr />
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="UserName">User name</label>
+                    <div class="col-md-10">
+                        <input class="form-control" data-val="true" data-val-required="The User name field is required." id="UserName" name="UserName" type="text" value="" />
+                        <span class="field-validation-valid" data-valmsg-for="UserName" data-valmsg-replace="true"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="Password">Password</label>
+                    <div class="col-md-10">
+                        <input class="form-control" data-val="true" data-val-required="The Password field is required." id="Password" name="Password" type="password" />
+                        <span class="field-validation-valid" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <div class="checkbox">
+                            <input data-val="true" data-val-required="The Remember me? field is required." id="RememberMe" name="RememberMe" type="checkbox" value="true" /><input name="RememberMe" type="hidden" value="false" />
+                            <label for="RememberMe">Remember me?</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Log in" class="btn btn-default" />
+                    </div>
+                </div>
+                <p>
+                    <a href="/Account/Register">Register</a> if you don't have a local account.
+                </p>
+</form>        </section>
+    </div>
+    <div class="col-md-4">
+        <section id="socialLoginForm">
+            
+<h4>Use another service to log in.</h4>
+<hr />
+        <div>
+            <p>There are no external authentication services configured. See <a href="http://go.microsoft.com/fwlink/?LinkId=313242">this article</a>
+            for details on setting up this ASP.NET application to support logging in via external services.</p>
+        </div>
+
+
+        </section>
+    </div>
+</div>
+
+        <hr />
+        <footer>
+            <p>&copy; 2014 - Seenergy</p>
+        </footer>
+    </div>
+
+    <script src="/Scripts/jquery-1.10.2.js"></script>
+
+    <script src="/Scripts/bootstrap.js"></script>
+<script src="/Scripts/respond.js"></script>
+
+    <script src="/Scripts/energyhack.js"></script>
+    
+    <script src="/Scripts/jquery.validate.js"></script>
+<script src="/Scripts/jquery.validate.unobtrusive.js"></script>
+
+
+
+    <script type="text/javascript">
+
+        EnergyHack.Layout.StartUp = function () {
+
+            if (EnergyHack.Page.StartUp) {
+                EnergyHack.Page.StartUp();
+            }
+        }
+
+        $(document).ready(EnergyHack.Layout.StartUp);
+
+    </script>
+</body>
+</html>

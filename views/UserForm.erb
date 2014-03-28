@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UserForm - My ASP.NET Application</title>
+    <link href="/Content/bootstrap.css" rel="stylesheet"/>
+<link href="/Content/site.css" rel="stylesheet"/>
+
+    <script src="/Scripts/modernizr-2.6.2.js"></script>
+
+    <script type='text/javascript' src='http://www.google.com/jsapi'></script>
+
+    
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+
+    <style>
+        .input_number {
+            border: 0;
+            color: #f6931f;
+            font-weight: bold;
+            width: 2em;
+        }
+    </style>
+
+
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                
+                
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    
+                    <li><img src="/img/Seenergy_Logo.png" style="width: 15%; height: 15%; padding-top:10px" /></li>
+                    
+                </ul>
+                    <ul class="nav navbar-nav navbar-right">
+        <li><a href="/Home/EnergyUse">Graphs</a></li>
+        <li><a href="/Home/Recommendations">Recommendations</a></li>
+        <li><a href="/Home/UserForm" id="loginLink">Configurations</a></li>
+        <li> <h4>|</h4></li>
+        <li><a href="/Account/Register" id="registerLink">Register</a></li>
+        <li><a href="/Account/Login" id="loginLink">Log in</a></li>
+        
+    </ul>
+
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        
+
+
+
+<h3>How many appliances are in your home?</h3>
+
+
+<form id="userForm" class="container">
+    <div class="form-group row">
+        <div class="col-xs-6">
+            <div style="position:relative; padding-top: 100px">
+            <label for="heaters">Number of Heaters:</label>
+            <input type="number" id="heaters" name="heaters" class="input_number" />
+            <div id="heaterSlider"></div>
+        </div>
+        </div>
+        <div class="col-xs-6">
+            <p>Heater Energy Signature</p>
+            <img class="img-responsive" src="/img/HeaterWatt.png" />
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-xs-6">
+            <div style="position:relative; padding-top: 100px">
+            <label for="washers">Number of Washers:</label>
+            <input type="number" name="washers" id="washers" class="input_number" />
+            <div id="washerSlider"></div>
+        </div>
+        </div>
+        <div class="col-xs-6">
+            <p>Washer Energy Signature</p>
+            <img class="img-responsive" src="/img/WasherWatt.png" />
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-xs-6">
+            <div style="position:relative; padding-top: 100px">
+            <label for="dryers">Number of Dryers:</label>
+            <input type="number" name="dryers" id="dryers" class="input_number" />
+            <div id="dryerSlider"></div>
+        </div>
+        </div>
+        <div class="col-xs-6">
+            <p>Dryer Energy Signature</p>
+            <img class="img-responsive" src="/img/DryerWatt.png" />
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-xs-6">
+            <div style="position:relative; padding-top: 100px">
+            <label for="ovens">Number of Ovens:</label>
+            <input type="number" name="ovens" id="ovens" class="input_number" />
+            <div id="ovenSlider"></div>
+        </div>
+        </div>
+        <div class="col-xs-6">
+            <p>Oven Energy Signature</p>
+            <img class="img-responsive" src="/img/OvenWatt.png" />
+        </div>
+    </div>
+    <input type="submit" class="btn btn-default" id="submitButton" value="Submit" />
+</form>
+
+<!--Div that will hold the pie chart-->
+<div id="pie-chart-div"></div>
+
+
+
+        <hr />
+        <footer>
+            <p>&copy; 2014 - Seenergy</p>
+        </footer>
+    </div>
+
+    <script src="/Scripts/jquery-1.10.2.js"></script>
+
+    <script src="/Scripts/bootstrap.js"></script>
+<script src="/Scripts/respond.js"></script>
+
+    <script src="/Scripts/energyhack.js"></script>
+    
+    <script src="//code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+    <script type="text/javascript">
+
+        EnergyHack.Page.SliderSetUp = function () {
+            $("#heaterSlider").slider({
+                min: 0,
+                max: 3,
+                step: 1,
+                slide: function (event, ui) {
+                    $("#heaters").val(ui.value);
+                }
+            });
+            $("#heaters").val($("#heaterSlider").slider("value"));
+            $("#washerSlider").slider({
+                min: 0,
+                max: 3,
+                step: 1,
+                slide: function (event, ui) {
+                    $("#washers").val(ui.value);
+                }
+            });
+            $("#washers").val($("#washerSlider").slider("value"));
+            $("#dryerSlider").slider({
+                min: 0,
+                max: 3,
+                step: 1,
+                slide: function (event, ui) {
+                    $("#dryers").val(ui.value);
+                }
+            });
+            $("#dryers").val($("#dryerSlider").slider("value"));
+            $("#ovenSlider").slider({
+                min: 0,
+                max: 3,
+                step: 1,
+                slide: function (event, ui) {
+                    $("#ovens").val(ui.value);
+                }
+            });
+            $("#ovens").val($("#ovenSlider").slider("value"));
+
+        }
+
+        EnergyHack.Page.ClickSubmit = function () {
+
+            $("#submitButton").bind("click", function (evt) {
+                evt.preventDefault();
+                EnergyHack.Page.SubmitData();
+            });
+        }
+
+        EnergyHack.Page.SubmitData = function (frm) {
+
+            window.location = '/Home/EnergyUse';
+
+        }
+
+
+        EnergyHack.Page.StartUp = function () {
+            EnergyHack.Page.SliderSetUp();
+            EnergyHack.Page.ClickSubmit();
+
+
+        }
+
+    </script>
+
+
+    <script type="text/javascript">
+
+        EnergyHack.Layout.StartUp = function () {
+
+            if (EnergyHack.Page.StartUp) {
+                EnergyHack.Page.StartUp();
+            }
+        }
+
+        $(document).ready(EnergyHack.Layout.StartUp);
+
+    </script>
+</body>
+</html>
