@@ -4,6 +4,9 @@ GEM
     rack (1.5.2)
     rack-protection (1.5.2)
       rack
+    rake (10.2.2)
+    raven (1.2.4)
+      rake (>= 0.7)
     sinatra (1.4.4)
       rack (~> 1.4)
       rack-protection (~> 1.4)
@@ -17,5 +20,6 @@ DEPENDENCIES
   bundler (= 1.5.3)
   rack (= 1.5.2)
   rack-protection (= 1.5.2)
+  raven
   sinatra (= 1.4.4)
   tilt (= 1.4.1)
