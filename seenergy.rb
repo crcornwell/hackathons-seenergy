@@ -1,4 +1,5 @@
 require 'sinatra'
+require 'newrelic_rpm'
 
 get '/Home/EnergyUse' do
 	erb :energyuse
