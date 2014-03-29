@@ -8,19 +8,6 @@ $(function() {
     });
 });
 
-var array = [
-    { date: "03/09/2014", usage: 43.5, appliance: "Washer" },
-    { date: "03/09/2014", usage: 121.5, appliance: "Oven" },
-    { date: "03/09/2014", usage: 90, appliance: "Dryer" },
-    { date: "03/09/2014", usage: 43.2, appliance: "Sleep" },
-    { date: "03/09/2014", usage: 884, appliance: "Heater" },
-    { date: "03/10/2014", usage: 14.5, appliance: "Washer" },
-    { date: "03/10/2014", usage: 37.5, appliance: "Oven" },
-    { date: "03/10/2014", usage: 30, appliance: "Dryer" },
-    { date: "03/10/2014", usage: 15.8, appliance: "Sleep" },
-    { date: "03/10/2014", usage: 252, appliance: "Heater" }
-];
-
 function pad(num, size) {
     var s = num + "";
     while (s.length < size) s = "0" + s;
