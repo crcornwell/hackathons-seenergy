@@ -1,0 +1,3 @@
+This is a simple little app meant to show a concept for a site that would connect to an API put out by the power utility that would show electrical usage over time. Through machine learning and signal processing algorithms, the application could take some basic information about the user and then analyze their usage graphs to approximate how much electricity certain appliances were using. It could then use this information to offer cost saving advice.
+
+Built almost entirely as a front end project, it uses HTML, CSS, JavaScript, and Google Charts, with a very basic Ruby backend built with Sinatra.
